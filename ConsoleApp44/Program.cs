@@ -40,8 +40,7 @@ namespace ConsoleApp43
                     Console.ReadKey();
                 }
 
-               
-                
+                              
                   
 
             }
@@ -90,6 +89,7 @@ namespace ConsoleApp43
                     return strokes;
                 
                 }
+            
                 }
         }
 
