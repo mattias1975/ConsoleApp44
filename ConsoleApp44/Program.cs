@@ -48,8 +48,7 @@ namespace ConsoleApp43
                             Console.WriteLine("You got ball in cup");
                             Console.ReadKey();
                         }
-
-                        
+                                                
 
                 }
 
