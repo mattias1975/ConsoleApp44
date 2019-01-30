@@ -37,6 +37,7 @@ namespace ConsoleApp43
                     balllength = GetLength(angle, velocity);
                     lengTotoCup = Math.Abs(lengTotoCup - balllength);
                     Console.ReadKey();
+
                         if (strokes > 10)
                         {
                             Console.WriteLine("You are out of strokes");
