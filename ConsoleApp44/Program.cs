@@ -11,48 +11,52 @@ namespace ConsoleApp43
 
 
             double Cup = 450;
+            double tracklength=0;
             double velocity = Getspeed();
             double angle = Getangle();
             double strokes = 1; //Getstrokes();
             double balllength = GetLength(angle, velocity);
             double lengTotoCup = Cup - balllength;
 
+            tracklength = tracklength + balllength;
 
-
-            while (strokes < 10 && lengTotoCup < Cup || lengTotoCup != 0)
+            
 
             {
-                try
+                while (strokes < 10 && lengTotoCup < Cup || lengTotoCup != 0 && tracklength<700)
+
                 {
 
-
-                    Console.WriteLine("Ball traveld: " + balllength);
-                    Console.WriteLine("Left to cup: " + lengTotoCup);
-                    Console.ReadKey();
-
-
-                    strokes = strokes + 1;
-                    velocity = Getspeed();
-                    angle = Getangle();
-                    balllength = GetLength(angle, velocity);
-                    lengTotoCup = Math.Abs(lengTotoCup - balllength);
-
-                }
-                catch
-                {
-                    if (lengTotoCup == 0)
                     {
-                        Console.WriteLine("you ball hit the cup.");
+
+
+                        Console.WriteLine("Ball traveld: " + balllength);
+                        Console.WriteLine("Left to cup: " + lengTotoCup);
+                        Console.ReadKey();
+
+
+                        strokes = strokes + 1;
+                        velocity = Getspeed();
+                        angle = Getangle();
+                        balllength = GetLength(angle, velocity);
+                        lengTotoCup = Math.Abs(lengTotoCup - balllength);
+
                     }
-                    else if (strokes > 10)
+                     
                     {
-                        Console.WriteLine("you are out of strokes");
+                        if (lengTotoCup == 0)
+                        {
+                            Console.WriteLine("you ball hit the cup.");
+                        }
+                        else if (strokes > 10)
+                        {
+                            Console.WriteLine("you are out of strokes");
+                        }
                     }
+
                 }
 
             }
-
-
         }
 
 
@@ -101,4 +105,3 @@ namespace ConsoleApp43
     }
 
 }
-
