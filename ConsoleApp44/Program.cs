@@ -20,7 +20,7 @@ namespace ConsoleApp43
 
 
             while (strokes < 10 && lengTotoCup < Cup || lengTotoCup != 0)
-                
+
             {
                 try
                 {
@@ -40,7 +40,7 @@ namespace ConsoleApp43
                 }
                 catch
                 {
-                    if (strokes == 0)
+                    if (lengTotoCup == 0)
                     {
                         Console.WriteLine("you ball hit the cup.");
                     }
@@ -94,8 +94,6 @@ namespace ConsoleApp43
                 double strokes = double.Parse(Console.ReadLine());
                 strokes = strokes + strokes;
                 return strokes;
-
-
             }
         }
 
