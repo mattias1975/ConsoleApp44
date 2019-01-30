@@ -17,12 +17,12 @@ namespace ConsoleApp43
             double balllength = GetLength(angle, velocity);
             double lengTotoCup = Cup - balllength;
 
-            while (strokes < 10 && lengTotoCup < Cup)
+
+
+            while (strokes < 10 && lengTotoCup < Cup || lengTotoCup != 0)
+                
             {
-
-
-
-
+                try
                 {
 
 
@@ -35,9 +35,21 @@ namespace ConsoleApp43
                     velocity = Getspeed();
                     angle = Getangle();
                     balllength = GetLength(angle, velocity);
-                    lengTotoCup = lengTotoCup - balllength;
+                    lengTotoCup = Math.Abs(lengTotoCup - balllength);
 
                 }
+                catch
+                {
+                    if (strokes == 0)
+                    {
+                        Console.WriteLine("you ball hit the cup.");
+                    }
+                    else if (strokes > 10)
+                    {
+                        Console.WriteLine("you are out of strokes");
+                    }
+                }
+
             }
 
 
@@ -70,7 +82,6 @@ namespace ConsoleApp43
             double angleRad = (Math.PI / 180) * angle;
             // Distance: Math.Pow(velocity, 2) / GRAVITY * Math.Sin(2 * angleInRadians)
             length = Math.Pow(velocity, 2) / 9.8 * Math.Sin(2 * angleRad);
-
 
             return length;
 
