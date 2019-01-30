@@ -37,6 +37,19 @@ namespace ConsoleApp43
                     balllength = GetLength(angle, velocity);
                     lengTotoCup = Math.Abs(lengTotoCup - balllength);
                     Console.ReadKey();
+                        if (strokes > 10)
+                        {
+                            Console.WriteLine("You are out of strokes");
+                            Console.ReadKey();
+                        }
+                        else if (lengTotoCup == 0)
+                        {
+                            Console.WriteLine("You got ball in cup");
+                            Console.ReadKey();
+                        }
+
+                        
+
                 }
 
                               
@@ -48,7 +61,7 @@ namespace ConsoleApp43
         }
             }
       
-
+        
         public static double Getspeed()
         {
             Console.Write("write velocityt");
@@ -79,6 +92,7 @@ namespace ConsoleApp43
 
         }
 
+
         private static double Getstrokes()
         {
                 {
@@ -88,6 +102,7 @@ namespace ConsoleApp43
                     return strokes;
                 
                 }
+
             
                 }
         }
