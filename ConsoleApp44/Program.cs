@@ -8,8 +8,7 @@ namespace ConsoleApp43
 
         static void Main(string[] args)
         {
-
-
+            
             double Cup = 450;
             double tracklength=0;
             double velocity = Getspeed();
