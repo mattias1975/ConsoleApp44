@@ -17,8 +17,7 @@ namespace ConsoleApp43
             double balllength = GetLength(angle, velocity);
             double lengTotoCup = Cup - balllength;
 
-
-         
+                     
             { 
             while (strokes < 10 && lengTotoCup < Cup || lengTotoCup != 0)
 
