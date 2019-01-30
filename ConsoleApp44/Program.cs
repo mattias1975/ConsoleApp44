@@ -19,6 +19,7 @@ namespace ConsoleApp43
 
             tracklength = tracklength + balllength;
 
+
             
             {
                 while (strokes < 10 && lengTotoCup < Cup || lengTotoCup != 0 && tracklength<700)
