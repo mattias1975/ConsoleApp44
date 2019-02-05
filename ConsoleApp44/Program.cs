@@ -101,7 +101,7 @@ namespace ConsoleApp43
 
                 }
 
-            } while (noNumber || velocity <= 0 && velocity > 100);
+            } while (noNumber || velocity <= 0.1 && velocity > 100);
             return velocity;
         }// end of method get speed
 
@@ -125,14 +125,13 @@ namespace ConsoleApp43
                 {
                     Console.WriteLine("Please write a number.");
 
-
                 }
                 catch (OverflowException)
                 {
                     Console.WriteLine("The number you write is not between 1-55");
 
                 }
-            } while (noNumber || angle <= 0 && angle > 55);
+            } while (noNumber || angle <= 0.1 && angle > 90);
             return angle;
         }
         public static double GetLength(double angle, double velocity)
@@ -149,17 +148,11 @@ namespace ConsoleApp43
 
         }
 
-        private static double Getstrokes()
-        {
-
-
-            double strokes = double.Parse(Console.ReadLine());
-            strokes = strokes + strokes;
-            return strokes;
+       
 
         }
 
 
     }
 
-}
+
