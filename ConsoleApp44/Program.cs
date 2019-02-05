@@ -9,7 +9,7 @@ namespace ConsoleApp43
 
         static void Main(string[] args)
         {
-            string namn;
+
             double Cup = 450;
             double tracklength = 0;
             double velocity = Getspeed();
@@ -20,8 +20,7 @@ namespace ConsoleApp43
             List<string> score = new List<string>();
 
 
-            Console.WriteLine("write your name please");
-            namn = Console.ReadLine();
+
             tracklength = tracklength + balllength;
 
 
@@ -32,8 +31,10 @@ namespace ConsoleApp43
 
 
 
+                balllength = Math.Round(balllength, 1);
+                Console.WriteLine("Ball traveld: " + balllength);
 
-                Console.WriteLine(namn + " " + "Ball traveld: " + balllength);
+                lengTotoCup = Math.Round(lengTotoCup, 1);
                 Console.WriteLine("Left to cup: " + lengTotoCup);
                 Console.ReadKey();
                 score.Add("Ball travel: " + balllength + " and left to cup: " + lengTotoCup);
@@ -84,6 +85,7 @@ namespace ConsoleApp43
                 {
 
                     velocity = double.Parse(Console.ReadLine());
+                    Math.Round(velocity, 1);
                     noNumber = false;
 
                 }
@@ -113,7 +115,10 @@ namespace ConsoleApp43
                 Console.Write("write angle");
                 try
                 {
+
                     angle = double.Parse(Console.ReadLine());
+                    Math.Round(angle, 1);
+
                     noNumber = false;
                 }
                 catch (FormatException)
@@ -124,10 +129,10 @@ namespace ConsoleApp43
                 }
                 catch (OverflowException)
                 {
-                    Console.WriteLine("The number you write is not between 1-100");
+                    Console.WriteLine("The number you write is not between 1-55");
 
                 }
-            } while (noNumber || angle <= 0 && angle > 55) ;
+            } while (noNumber || angle <= 0 && angle > 55);
             return angle;
         }
         public static double GetLength(double angle, double velocity)
